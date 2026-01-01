@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bien-être numérique : Détox des écrans - Votre guide pratique</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      /* Reset et styles de base */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary-green: #2e8b57;
+        --primary-blue: #4169e1;
+        --light-green: #e8f5e9;
+        --light-blue: #e8f4fd;
+        --dark-gray: #333;
+        --medium-gray: #666;
+        --light-gray: #f8f9fa;
+        --white: #fff;
+        --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        --transition: all 0.3s ease;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, sans-serif;
+        line-height: 1.6;
+        color: var(--dark-gray);
+        background-color: var(--white);
+        overflow-x: hidden;
+      }
+
+      /* En-tête fixe */
+      header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.95);
+        box-shadow: var(--shadow);
+        z-index: 1000;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--primary-green);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .logo i {
+        color: var(--primary-blue);
+      }
+
+      .nav-menu {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .nav-menu a {
+        text-decoration: none;
+        color: var(--dark-gray);
+        font-weight: 500;
+        transition: var(--transition);
+      }
+
+      .nav-menu a:hover {
+        color: var(--primary-green);
+      }
+
+      .sticky-buy {
+        background-color: var(--primary-green);
+        color: var(--white);
+        border: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 50px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition);
+        box-shadow: 0 4px 10px rgba(46, 139, 87, 0.3);
+        text-align: center;
+      }
+
+      .sticky-buy:hover {
+        background-color: #26734a;
+        transform: translateY(-2px);
+      }
+
+      .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: var(--primary-green);
+        cursor: pointer;
+      }
+
+      /* Section Héro */
+      .hero {
+        padding: 10rem 2rem 5rem;
+        background: linear-gradient(
+          135deg,
+          var(--light-green) 0%,
+          var(--light-blue) 100%
+        );
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .hero-text {
+        text-align: left;
+      }
+
+      .hero h1 {
+        font-size: 3.2rem;
+        color: var(--dark-gray);
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+      }
+
+      .hero h1 span {
+        color: var(--primary-green);
+      }
+
+      .hero-subtitle {
+        font-size: 1.4rem;
+        color: var(--medium-gray);
+        margin-bottom: 2rem;
+      }
+
+      .hero-image {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .ebook-cover {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 10px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        transform: rotate(5deg);
+        transition: transform 0.5s ease;
+      }
+
+      .ebook-cover:hover {
+        transform: rotate(0deg) scale(1.03);
+      }
+
+      .main-cta {
+        background-color: var(--primary-blue);
+        color: var(--white);
+        border: none;
+        padding: 1.2rem 2.5rem;
+        border-radius: 50px;
+        font-size: 1.3rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: var(--transition);
+        margin: 1.5rem 0;
+        display: inline-block;
+        box-shadow: 0 6px 15px rgba(65, 105, 225, 0.4);
+        text-decoration: none;
+      }
+
+      .main-cta:hover {
+        background-color: #3157c4;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(65, 105, 225, 0.5);
+      }
+
+      .guarantee {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1.5rem;
+        color: var(--medium-gray);
+      }
+
+      .guarantee i {
+        color: var(--primary-green);
+        font-size: 1.5rem;
+      }
+
+      /* Sections communes */
+      section {
+        padding: 5rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        color: var(--dark-gray);
+      }
+
+      .section-title span {
+        color: var(--primary-green);
+      }
+
+      /* Section Problème */
+      .pain-points {
+        background-color: var(--light-gray);
+      }
+
+      .points-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+
+      .point-card {
+        background-color: var(--white);
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: var(--shadow);
+        text-align: center;
+        transition: var(--transition);
+      }
+
+      .point-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .point-icon {
+        font-size: 2.5rem;
+        color: var(--primary-blue);
+        margin-bottom: 1rem;
+      }
+
+      .point-card p {
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+
+      /* Section Solution */
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .feature-card {
+        background-color: var(--white);
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: var(--shadow);
+        border-left: 5px solid var(--primary-green);
+        transition: var(--transition);
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .feature-card i {
+        font-size: 2rem;
+        color: var(--primary-green);
+        margin-bottom: 1rem;
+      }
+
+      .feature-card h3 {
+        margin-bottom: 1rem;
+        color: var(--dark-gray);
+      }
+
+      /* Section Aperçu */
+      .preview {
+        background-color: var(--light-blue);
+      }
+
+      .chapters-list {
+        max-width: 800px;
+        margin: 0 auto 3rem;
+        background-color: var(--white);
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: var(--shadow);
+      }
+
+      .chapter-item {
+        padding: 1rem 0;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .chapter-item:last-child {
+        border-bottom: none;
+      }
+
+      .chapter-number {
+        background-color: var(--light-green);
+        color: var(--primary-green);
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        margin-right: 1rem;
+      }
+
+      .chapter-content {
+        flex-grow: 1;
+      }
+
+      .sample-btn {
+        background-color: var(--primary-blue);
+        color: var(--white);
+        border: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 50px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition);
+        margin: 2rem auto;
+        display: block;
+      }
+
+      .sample-btn:hover {
+        background-color: #3157c4;
+      }
+
+      /* Section Témoignages */
+      .testimonials {
+        background-color: var(--light-gray);
+        position: relative;
+      }
+
+      .carousel-container {
+        max-width: 800px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .carousel-track {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+
+      .testimonial-card {
+        min-width: 100%;
+        background-color: var(--white);
+        padding: 2.5rem;
+        border-radius: 10px;
+        box-shadow: var(--shadow);
+        text-align: center;
+      }
+
+      .testimonial-rating {
+        color: #ffd700;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+      }
+
+      .testimonial-text {
+        font-style: italic;
+        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+        line-height: 1.7;
+      }
+
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      .author-avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: var(--light-blue);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: var(--primary-blue);
+      }
+
+      .carousel-nav {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .carousel-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #ccc;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .carousel-dot.active {
+        background-color: var(--primary-green);
+        transform: scale(1.2);
+      }
+
+      /* Section FAQ */
+      .faq-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .faq-item {
+        margin-bottom: 1rem;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      }
+
+      .faq-question {
+        background-color: var(--light-green);
+        padding: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      .faq-question i {
+        transition: transform 0.3s ease;
+      }
+
+      .faq-question.active i {
+        transform: rotate(180deg);
+      }
+
+      .faq-answer {
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        background-color: var(--white);
+        transition: all 0.3s ease;
+      }
+
+      .faq-answer.active {
+        padding: 1.5rem;
+        max-height: 500px;
+      }
+
+      /* Section Offre finale */
+      .final-offer {
+        background: linear-gradient(
+          135deg,
+          var(--primary-green) 0%,
+          var(--primary-blue) 100%
+        );
+        color: var(--white);
+        text-align: center;
+        border-radius: 15px;
+        padding: 4rem 2rem;
+        margin: 2rem auto;
+        max-width: 1000px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      }
+
+      .offer-title {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .offer-includes {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin: 2.5rem 0;
+      }
+
+      .offer-item {
+        background-color: rgba(255, 255, 255, 0.15);
+        padding: 1.5rem;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+      }
+
+      .countdown {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 2rem 0;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      .countdown-unit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .countdown-value {
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        min-width: 80px;
+      }
+
+      .countdown-label {
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+        opacity: 0.9;
+      }
+
+      .final-cta {
+        background-color: var(--white);
+        color: var(--primary-green);
+        border: none;
+        padding: 1.5rem 3rem;
+        border-radius: 50px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: var(--transition);
+        margin: 2rem 0;
+        display: inline-block;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+      }
+
+      .final-cta:hover {
+        transform: scale(1.05);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      .payment-methods {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .payment-icon {
+        font-size: 2.5rem;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      /* Pied de page */
+      footer {
+        background-color: var(--dark-gray);
+        color: var(--white);
+        padding: 3rem 2rem 1.5rem;
+        text-align: center;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .footer-links a {
+        color: #ccc;
+        text-decoration: none;
+        transition: var(--transition);
+      }
+
+      .footer-links a:hover {
+        color: var(--white);
+      }
+
+      .copyright {
+        margin-top: 2rem;
+        color: #999;
+        font-size: 0.9rem;
+      }
+
+      /* Modals */
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 2000;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal-content {
+        background-color: var(--white);
+        border-radius: 15px;
+        width: 90%;
+        max-width: 500px;
+        padding: 2.5rem;
+        position: relative;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      .close-modal {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: var(--medium-gray);
+        transition: var(--transition);
+      }
+
+      .close-modal:hover {
+        color: var(--dark-gray);
+      }
+
+      .modal-title {
+        color: var(--primary-green);
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+
+      .price-display {
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-align: center;
+        margin: 1.5rem 0;
+        color: var(--primary-blue);
+      }
+
+      .currency-toggle {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin: 1rem 0;
+      }
+
+      .currency-btn {
+        padding: 0.5rem 1.5rem;
+        border: 2px solid var(--primary-blue);
+        background: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .currency-btn.active {
+        background-color: var(--primary-blue);
+        color: var(--white);
+      }
+
+      .success-message {
+        text-align: center;
+        padding: 2rem;
+        display: none;
+      }
+
+      .success-message i {
+        font-size: 4rem;
+        color: var(--primary-green);
+        margin-bottom: 1.5rem;
+      }
+
+      /* Responsive */
+      @media (max-width: 992px) {
+        .hero-content {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .hero-text {
+          text-align: center;
+        }
+
+        .hero h1 {
+          font-size: 2.8rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        header {
+          padding: 1rem;
+        }
+
+        .nav-menu {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background-color: var(--white);
+          flex-direction: column;
+          padding: 1rem;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-menu.active {
+          display: flex;
+        }
+
+        .mobile-menu-btn {
+          display: block;
+        }
+
+        .sticky-buy {
+          padding: 0.6rem 1.2rem;
+          font-size: 0.9rem;
+        }
+
+        .hero {
+          padding: 8rem 1rem 3rem;
+        }
+
+        .hero h1 {
+          font-size: 2.2rem;
+        }
+
+        .hero-subtitle {
+          font-size: 1.2rem;
+        }
+
+        .section-title {
+          font-size: 2rem;
+        }
+
+        .countdown {
+          font-size: 1.8rem;
+          flex-wrap: wrap;
+        }
+
+        .countdown-unit {
+          width: calc(50% - 0.5rem);
+          margin-bottom: 1rem;
+        }
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in {
+        animation: fadeIn 0.8s ease forwards;
+      }
+
+      .hidden {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- En-tête fixe -->
+    <header>
+      <div class="logo">
+        <i class="fas fa-brain"></i>
+        <span>Détox Digitale</span>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#hero">Accueil</a>
+        <a href="#testimonials">Témoignages</a>
+        <a href="#faq">FAQ</a>
+        <a href="#" class="sticky-buy" id="headerBuyBtn">Acheter maintenant</a>
+      </nav>
+    </header>
+
+    <!-- Section Héro -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Libérez-vous de la <span>dépendance aux écrans</span></h1>
+          <p class="hero-subtitle">
+            Votre guide 100% pratique pour retrouver concentration, calme et
+            connexions réelles
+          </p>
+          <a href="#" class="main-cta" id="mainCta"
+            >Télécharger mon exemplaire -
+            <span id="priceDisplay">9,99€</span></a
+          >
+          <div class="guarantee">
+            <i class="fas fa-shield-alt"></i>
+            <span>Garantie 30 jours satisfait ou remboursé</span>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img
+            src="bien_etre_numerique .png"
+            alt="Couverture ebook Bien-être numérique"
+            class="ebook-cover"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Problème -->
+    <section class="pain-points" id="painPoints">
+      <h2 class="section-title">Vous vous reconnaissez <span>?</span></h2>
+      <div class="points-container">
+        <div class="point-card">
+          <div class="point-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <p>Vous passez plus de 4h/jour sur votre téléphone ?</p>
+        </div>
+        <div class="point-card">
+          <div class="point-icon">
+            <i class="fas fa-bell"></i>
+          </div>
+          <p>
+            Vous vous sentez fatigué, distrait, envahi par les notifications ?
+          </p>
+        </div>
+        <div class="point-card">
+          <div class="point-icon">
+            <i class="fas fa-child"></i>
+          </div>
+          <p>Vous craignez l'impact sur vos enfants ?</p>
+        </div>
+        <div class="point-card">
+          <div class="point-icon">
+            <i class="fas fa-redo"></i>
+          </div>
+          <p>Vous avez déjà essayé de réduire mais sans succès ?</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Solution -->
+    <section class="solution" id="solution">
+      <h2 class="section-title">La solution <span>complète</span></h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <i class="fas fa-book-open"></i>
+          <h3>Guide complet</h3>
+          <p>
+            Des pages actionnables avec exercices pratiques à chaque chapitre.
+          </p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-clipboard-check"></i>
+          <h3>7 méthodes testées</h3>
+          <p>Détox progressive ou radicale selon votre profil et objectifs.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-file-pdf"></i>
+          <h3>Fiches pratiques</h3>
+          <p>Planning hebdomadaire, tracking d'écrans, défis sans écran.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-users"></i>
+          <h3>Spécial parents</h3>
+          <p>
+            Comment accompagner vos enfants vers un équilibre numérique sain.
+          </p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-gift"></i>
+          <h3>Ressources bonus</h3>
+          <p>Templates de planning, guide des applications utiles.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-download"></i>
+          <h3>Accès immédiat</h3>
+          <p>Format PDF disponible instantanément après achat.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Aperçu -->
+    <section class="preview" id="preview">
+      <h2 class="section-title">Un aperçu du <span>contenu</span></h2>
+      <div class="chapters-list">
+        <div class="chapter-item">
+          <div class="chapter-number">1</div>
+          <div class="chapter-content">
+            <h4>Comprendre le bien-être numérique</h4>
+            <p>Définir l’équilibre numérique.</p>
+          </div>
+        </div>
+        <div class="chapter-item">
+          <div class="chapter-number">2</div>
+          <div class="chapter-content">
+            <h4>Les effets négatifs des écrans sur le corps et l’esprit</h4>
+            <p>Identifier les impacts des écrans.</p>
+          </div>
+        </div>
+        <div class="chapter-item">
+          <div class="chapter-number">3</div>
+          <div class="chapter-content">
+            <h4>L’addiction aux écrans : mythe ou réalité ?</h4>
+            <p>Comprendre la dépendance numérique.</p>
+          </div>
+        </div>
+        <div class="chapter-item">
+          <div class="chapter-number">4</div>
+          <div class="chapter-content">
+            <h4>Faire le point sur sa consommation numérique</h4>
+            <p>Analyser ses usages digitaux.</p>
+          </div>
+        </div>
+        <div class="chapter-item">
+          <div class="chapter-number">5</div>
+          <div class="chapter-content">
+            <h4>Les principes fondamentaux de la détox des écrans</h4>
+            <p>Poser les bases de la détox.</p>
+          </div>
+        </div>
+        <div class="chapter-item">
+          <div class="chapter-number">6</div>
+          <div class="chapter-content">
+            <h4>Méthodes concrètes pour réduire le temps d’écran</h4>
+            <p>Réduire le temps d’écran.</p>
+          </div>
+        </div>
+        <div class="chapter-item">
+          <div class="chapter-number">7</div>
+          <div class="chapter-content">
+            <h4>Remplacer les écrans par des activités positives</h4>
+            <p>Remplacer les écrans intelligemment.</p>
+          </div>
+        </div>
+        <div class="chapter-item">
+          <div class="chapter-number">8</div>
+          <div class="chapter-content">
+            <h4>Maintenir l'équilibre à long terme</h4>
+            <p>Optimiser l’usage professionnel.</p>
+          </div>
+        </div>
+        <div class="chapter-item">
+          <div class="chapter-number">9</div>
+          <div class="chapter-content">
+            <h4>Parents et enfants : instaurer un équilibre numérique</h4>
+            <p>Encadrer l’usage des enfants.</p>
+          </div>
+        </div>
+        <div class="chapter-item">
+          <div class="chapter-number">10</div>
+          <div class="chapter-content">
+            <h4>Construire une relation saine et durable avec le numérique</h4>
+            <p>Maintenir un équilibre durable.</p>
+          </div>
+        </div>
+      </div>
+      <!-- <button class="sample-btn" id="sampleBtn">Lire un extrait gratuit</button> -->
+    </section>
+
+    <!-- Section Témoignages -->
+    <section class="testimonials" id="testimonials">
+      <h2 class="section-title">
+        Ils ont changé <span>leur vie numérique</span>
+      </h2>
+      <div class="carousel-container">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Grâce à ce guide, j'ai réduit mon temps d'écran de 60%. Je dors
+              mieux, je suis plus productif au travail et j'ai recommencé à lire
+              des livres. La méthode progressive est parfaite pour ceux qui,
+              comme moi, pensaient ne pas pouvoir se passer de leur smartphone."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">M.D.</div>
+              <div>
+                <h4>Marie D., 34 ans</h4>
+                <p>Cheffe de projet</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "En tant que parent, je m'inquiétais de l'exposition de mes
+              enfants aux écrans. Le chapitre spécial famille m'a donné des
+              outils concrets pour établir des règles équilibrées. Nous passons
+              maintenant plus de temps ensemble à jouer et à discuter."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">T.L.</div>
+              <div>
+                <h4>Thomas L., 42 ans</h4>
+                <p>Père de deux enfants</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "J'avais essayé plusieurs applications de contrôle sans succès. Ce
+              qui fait la différence ici, c'est l'approche holistique : on ne se
+              contente pas de limiter les écrans, on apprend à remplacer ces
+              habitudes par des activités plus épanouissantes."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">S.P.</div>
+              <div>
+                <h4>Sophie P., 29 ans</h4>
+                <p>Graphiste freelance</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-nav" id="carouselNav">
+          <div class="carousel-dot active" data-index="0"></div>
+          <div class="carousel-dot" data-index="1"></div>
+          <div class="carousel-dot" data-index="2"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section FAQ -->
+    <section class="faq" id="faq">
+      <h2 class="section-title">Questions <span>fréquentes</span></h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Quels formats sont disponibles ?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              L'ebook est disponible en PDF (lisible sur tous les appareils) et
+              EPUB (compatible avec les liseuses comme Kindle, Kobo, etc.). Vous
+              recevez les deux formats immédiatement après votre achat.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Comment fonctionne la garantie 30 jours ?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Si vous n'êtes pas satisfait de votre achat pour quelque raison
+              que ce soit, envoyez-nous simplement un email dans les 30 jours
+              suivant votre achat et nous vous rembourserons intégralement, sans
+              questions.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Combien de temps pour voir des résultats ?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              La plupart des lecteurs constatent une amélioration dès la
+              première semaine (meilleur sommeil, moins de stress). En 3-4
+              semaines, les nouvelles habitudes sont bien ancrées. Le guide
+              propose à la fois des méthodes rapides (7 jours) et progressives
+              (21 jours).
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Ce guide est-il adapté aux enfants/adolescents ?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Le guide s'adresse principalement aux adultes, mais un chapitre
+              complet est consacré à l'accompagnement des enfants et
+              adolescents. Vous y trouverez des conseils adaptés à chaque âge
+              pour instaurer une relation saine avec les écrans en famille.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Offre finale -->
+    <section class="final-offer" id="finalOffer">
+      <h2 class="offer-title">Offre spéciale lancement</h2>
+      <p>
+        Rejoignez les milliers de personnes qui ont retrouvé leur liberté
+        numérique
+      </p>
+
+      <div class="offer-includes">
+        <div class="offer-item">
+          <i class="fas fa-book"></i>
+          <h4>Ebook complet</h4>
+          <p>Des pages format PDF</p>
+        </div>
+        <div class="offer-item">
+          <i class="fas fa-file-pdf"></i>
+          <h4>Fiches pratiques</h4>
+          <p>Fiches à imprimer</p>
+        </div>
+        <div class="offer-item">
+          <i class="fas fa-infinity"></i>
+          <h4>Accès à vie</h4>
+          <p>Mises à jour incluses</p>
+        </div>
+      </div>
+
+      <div class="countdown" id="countdown">
+        <div class="countdown-unit">
+          <div class="countdown-value" id="hours">24</div>
+          <div class="countdown-label">Heures</div>
+        </div>
+        <div class="countdown-unit">
+          <div class="countdown-value" id="minutes">00</div>
+          <div class="countdown-label">Minutes</div>
+        </div>
+        <div class="countdown-unit">
+          <div class="countdown-value" id="seconds">00</div>
+          <div class="countdown-label">Secondes</div>
+        </div>
+      </div>
+
+      <a href="#" class="final-cta" id="finalCta"
+        >Je veux retrouver mon temps libre !</a
+      >
+
+      <div class="payment-methods">
+        <i class="fab fa-cc-visa payment-icon"></i>
+        <i class="fab fa-cc-mastercard payment-icon"></i>
+        <i class="fab fa-cc-paypal payment-icon"></i>
+        <i class="fab fa-cc-apple-pay payment-icon"></i>
+        <i class="fab fa-cc-amazon-pay payment-icon"></i>
+      </div>
+
+      <p style="margin-top: 1.5rem; opacity: 0.9">
+        Paiement 100% sécurisé - Données cryptées
+      </p>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+      <div class="footer-links">
+        <a href="#" id="legalLink">Mentions légales</a>
+        <a href="#" id="refundLink">Politique de remboursement</a>
+        <a href="mailto:support@detoxdigitale.com"
+          >Contact: support@detoxdigitale.com</a
+        >
+      </div>
+      <div class="copyright">
+        <p>&copy; 2023 Détox Digitale. Tous droits réservés.</p>
+        <p>Bien-être numérique : détox des écrans</p>
+      </div>
+    </footer>
+
+    <!-- Modal d'achat -->
+
+    <script>
+      // DOM Elements
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const navMenu = document.getElementById("navMenu");
+      const mainCta = document.getElementById("mainCta");
+      const sampleBtn = document.getElementById("sampleBtn");
+      const finalCta = document.getElementById("finalCta");
+      const headerBuyBtn = document.getElementById("headerBuyBtn");
+      const purchaseModal = document.getElementById("purchaseModal");
+      const closeModal = document.getElementById("closeModal");
+      const sampleModal = document.getElementById("sampleModal");
+      const closeSampleModal = document.getElementById("closeSampleModal");
+      const carouselTrack = document.getElementById("carouselTrack");
+      const carouselNav = document.getElementById("carouselNav");
+      const carouselDots = document.querySelectorAll(".carousel-dot");
+      const faqQuestions = document.querySelectorAll(".faq-question");
+      const countdownHours = document.getElementById("hours");
+      const countdownMinutes = document.getElementById("minutes");
+      const countdownSeconds = document.getElementById("seconds");
+      const priceDisplay = document.getElementById("priceDisplay");
+      const modalPrice = document.getElementById("modalPrice");
+      const currencyButtons = document.querySelectorAll(".currency-btn");
+      const confirmPurchase = document.getElementById("confirmPurchase");
+      const purchaseForm = document.getElementById("purchaseForm");
+      const successMessage = document.getElementById("successMessage");
+      const closeSuccess = document.getElementById("closeSuccess");
+      const emailInput = document.getElementById("email");
+      const downloadSample = document.getElementById("downloadSample");
+      const sampleEmail = document.getElementById("sampleEmail");
+
+      // Variables globales
+      let currentSlide = 0;
+      let slideInterval;
+      let countdownInterval;
+      let currency = "eur"; // Devise par défaut
+      const prices = {
+        eur: "9,99€",
+        usd: "$10.99",
+      };
+
+      // Menu mobile
+      mobileMenuBtn.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        mobileMenuBtn.innerHTML = navMenu.classList.contains("active")
+          ? '<i class="fas fa-times"></i>'
+          : '<i class="fas fa-bars"></i>';
+      });
+
+      // Fermer le menu mobile en cliquant sur un lien
+      document.querySelectorAll(".nav-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navMenu.classList.remove("active");
+          mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        });
+      });
+
+      // Smooth scroll pour les ancres
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Carousel de témoignages
+      function updateCarousel() {
+        const slideWidth =
+          document.querySelector(".testimonial-card").offsetWidth;
+        carouselTrack.style.transform = `translateX(-${
+          currentSlide * slideWidth
+        }px)`;
+
+        // Mettre à jour les indicateurs
+        carouselDots.forEach((dot, index) => {
+          dot.classList.toggle("active", index === currentSlide);
+        });
+      }
+
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % 3;
+        updateCarousel();
+      }
+
+      // Démarrer le carousel automatique
+      function startCarousel() {
+        slideInterval = setInterval(nextSlide, 5000);
+      }
+
+      // Navigation manuelle du carousel
+      carouselDots.forEach((dot) => {
+        dot.addEventListener("click", () => {
+          clearInterval(slideInterval);
+          currentSlide = parseInt(dot.getAttribute("data-index"));
+          updateCarousel();
+          startCarousel();
+        });
+      });
+
+      // FAQ accordéon
+      faqQuestions.forEach((question) => {
+        question.addEventListener("click", () => {
+          const answer = question.nextElementSibling;
+          const isActive = answer.classList.contains("active");
+
+          // Fermer toutes les réponses
+          document.querySelectorAll(".faq-answer").forEach((item) => {
+            item.classList.remove("active");
+          });
+
+          // Fermer toutes les questions
+          document.querySelectorAll(".faq-question").forEach((item) => {
+            item.classList.remove("active");
+          });
+
+          // Ouvrir la réponse cliquée si elle était fermée
+          if (!isActive) {
+            answer.classList.add("active");
+            question.classList.add("active");
+          }
+        });
+      });
+
+      // Compte à rebours (24 heures)
+      function startCountdown() {
+        // Définir la date de fin (24h à partir de maintenant)
+        const now = new Date();
+        const endTime = new Date(now.getTime() + 24 * 60 * 60 * 1000);
+
+        function updateCountdown() {
+          const now = new Date();
+          const timeLeft = endTime - now;
+
+          if (timeLeft <= 0) {
+            clearInterval(countdownInterval);
+            countdownHours.textContent = "00";
+            countdownMinutes.textContent = "00";
+            countdownSeconds.textContent = "00";
+            return;
+          }
+
+          const hours = Math.floor(timeLeft / (1000 * 60 * 60));
+          const minutes = Math.floor(
+            (timeLeft % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+          countdownHours.textContent = hours.toString().padStart(2, "0");
+          countdownMinutes.textContent = minutes.toString().padStart(2, "0");
+          countdownSeconds.textContent = seconds.toString().padStart(2, "0");
+        }
+
+        updateCountdown();
+        countdownInterval = setInterval(updateCountdown, 1000);
+      }
+
+      // Gestion des devises
+      function updateCurrency(newCurrency) {
+        currency = newCurrency;
+
+        // Mettre à jour les prix affichés
+        priceDisplay.textContent = prices[currency];
+        modalPrice.textContent = prices[currency];
+
+        // Mettre à jour les boutons de devise
+        currencyButtons.forEach((btn) => {
+          btn.classList.toggle(
+            "active",
+            btn.getAttribute("data-currency") === currency
+          );
+        });
+
+        // Sauvegarder la préférence dans localStorage
+        localStorage.setItem("preferredCurrency", currency);
+      }
+
+      // Modal d'achat
+      function openPurchaseModal() {
+        purchaseModal.style.display = "flex";
+        document.body.style.overflow = "hidden";
+      }
+
+      function closePurchaseModal() {
+        purchaseModal.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+
+      // Modal d'extrait
+      function openSampleModal() {
+        sampleModal.style.display = "flex";
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeSampleModalFunc() {
+        sampleModal.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+
+      // Animation au défilement
+      function animateOnScroll() {
+        const elements = document.querySelectorAll(
+          ".section-title, .point-card, .feature-card, .chapter-item, .testimonial-card, .faq-item"
+        );
+
+        elements.forEach((element) => {
+          const elementTop = element.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+
+          if (elementTop < windowHeight - 100) {
+            element.classList.add("fade-in");
+          }
+        });
+      }
+
+      // Validation email simple
+      function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      }
+
+      // Événements
+      mainCta.addEventListener("click", openPurchaseModal);
+      headerBuyBtn.addEventListener("click", openPurchaseModal);
+      finalCta.addEventListener("click", openPurchaseModal);
+      closeModal.addEventListener("click", closePurchaseModal);
+      sampleBtn.addEventListener("click", openSampleModal);
+      closeSampleModal.addEventListener("click", closeSampleModalFunc);
+
+      // Fermer les modals en cliquant à l'extérieur
+      window.addEventListener("click", (e) => {
+        if (e.target === purchaseModal) closePurchaseModal();
+        if (e.target === sampleModal) closeSampleModalFunc();
+      });
+
+      // Gestion des devises
+      currencyButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          updateCurrency(btn.getAttribute("data-currency"));
+        });
+      });
+
+      // Simulation d'achat
+      confirmPurchase.addEventListener("click", () => {
+        const email = emailInput.value.trim();
+
+        if (!email || !isValidEmail(email)) {
+          alert("Veuillez entre r une adresse email valide.");
+          return;
+        }
+
+        // Simuler un traitement
+        purchaseForm.style.display = "none";
+        successMessage.style.display = "block";
+
+        // Simuler l'envoi de l'email (dans la réalité, c'est ici qu'on appellerait une API)
+        setTimeout(() => {
+          console.log(`Email de confirmation envoyé à ${email}`);
+        }, 1000);
+      });
+
+      // Téléchargement de l'extrait
+      downloadSample.addEventListener("click", () => {
+        const email = sampleEmail.value.trim();
+
+        if (!email || !isValidEmail(email)) {
+          alert(
+            "Veuillez entrer une adresse email valide pour recevoir l'extrait."
+          );
+          return;
+        }
+
+        // Simuler l'envoi de l'extrait
+        alert(`Extrait envoyé à ${email} ! Vérifiez votre boîte de réception.`);
+        closeSampleModalFunc();
+
+        // Sauvegarder l'email pour le remarketing (localStorage)
+        localStorage.setItem("sampleDownloader", email);
+      });
+
+      closeSuccess.addEventListener("click", () => {
+        successMessage.style.display = "none";
+        purchaseForm.style.display = "block";
+        emailInput.value = "";
+        closePurchaseModal();
+      });
+
+      // Initialisation
+      function init() {
+        // Démarrer le carousel
+        startCarousel();
+
+        // Démarrer le compte à rebours
+        startCountdown();
+
+        // Récupérer la devise préférée depuis localStorage
+        const savedCurrency = localStorage.getItem("preferredCurrency");
+        if (
+          savedCurrency &&
+          (savedCurrency === "eur" || savedCurrency === "usd")
+        ) {
+          updateCurrency(savedCurrency);
+        }
+
+        // Détection de géolocalisation simple pour la devise
+        // (simulée ici pour l'exemple)
+        const userLanguage = navigator.language || navigator.userLanguage;
+        if (userLanguage.includes("en") && !userLanguage.includes("en-GB")) {
+          // Si l'utilisateur semble anglophone (sauf UK), proposer USD
+          updateCurrency("usd");
+        }
+
+        // Initialiser les animations au défilement
+        window.addEventListener("scroll", animateOnScroll);
+        animateOnScroll(); // Exécuter une première fois
+
+        // Vérifier si l'utilisateur a déjà téléchargé un extrait
+        const hasDownloadedSample = localStorage.getItem("sampleDownloader");
+        if (hasDownloadedSample) {
+          // On pourrait personnaliser l'expérience ici
+          console.log("Utilisateur connu :", hasDownloadedSample);
+        }
+      }
+
+      // Démarrer l'application
+      document.addEventListener("DOMContentLoaded", init);
+    </script>
+  </body>
+</html>
